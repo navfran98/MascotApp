@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_your_pets"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_your_pets" />
+        <item
+            android:id="@+id/nav_maps"
+            android:icon="@drawable/maps_logo"
+            android:title="@string/menu_maps"/>
+        <item
+            android:id="@+id/nav_services"
+            android:icon="@drawable/services_logo"
+            android:title="@string/menu_services" />
+        <item
+            android:id="@+id/nav_chat_with_vets"
+            android:icon="@drawable/chat_with_vets_logo"
+            android:title="@string/menu_chat_with_vets" />
+        <item
+            android:id="@+id/nav_lost_pets"
+            android:icon="@drawable/lost_pets_logo"
+            android:title="@string/menu_lost_pets" />
+        <item
+            android:id="@+id/nav_tinder_for_pets"
+            android:icon="@drawable/tinder_for_pets_logo"
+            android:title="@string/menu_tinder_for_pets"/>
+
+        <item
+            android:id="@+id/nav_FAQ"
+            android:icon="@drawable/faq_logo"
+            android:title="@string/menu_FAQ"/>
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person"
+            android:title="My Profile"/>
+    </group>
+</menu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_home_sp"
+        android:icon="@drawable/home_logo"
+        android:title="@string/menu_home" />
+    <item
+        android:id="@+id/nav_clients_sp"
+        android:icon="@drawable/ic_person"
+        android:title="@string/clients" />
+    <item
+        android:id="@+id/nav_maps_sp"
+        android:icon="@drawable/maps_logo"
+        android:title="@string/menu_maps"/>
+
+        <item
+            android:id="@+id/nav_chat_with_vets"
+            android:icon="@drawable/chat_with_vets_logo"
+            android:title="@string/menu_chat_with_vets" />
+    </group>
+</menu>

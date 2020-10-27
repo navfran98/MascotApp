@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "370703712495",
+    "firebase_url": "https://mascotapp-89395.firebaseio.com",
+    "project_id": "mascotapp-89395",
+    "storage_bucket": "mascotapp-89395.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370703712495:android:7da1921cfbaeec5bca9b1a",
+        "android_client_info": {
+          "package_name": "com.barkindustries.mascotapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370703712495-0lsmptkjeoihduikc3ih85tgk9l5pe8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM1-mM69OuJyrLkAirCtJgCTsU2ngwhwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370703712495-0lsmptkjeoihduikc3ih85tgk9l5pe8h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

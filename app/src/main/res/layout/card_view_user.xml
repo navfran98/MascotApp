@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/principalLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="#FFE188"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5sp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civProfilePic"
+            android:layout_width="48sp"
+            android:layout_height="48sp"
+            android:src="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/default_contact_card_name"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dotNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="30dp"
+        android:text="@string/notification"
+        android:textColor="#EC0505"
+        android:textColorHighlight="#A10A0A"
+        android:textSize="35sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/tinderFire"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/tinder_fire_icon"
+        android:visibility="gone" />
+
+</LinearLayout>

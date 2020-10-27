@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/new_MH_screen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a new medical record"
+        android:textSize="27sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/new_medical_history_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Title"
+        android:inputType="text"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_MH_screen_title" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_medical_history_title">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/new_medical_history_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:inputType="text"
+                android:hint="Description"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/new_medical_history_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Any medicament involved?"
+                android:textSize="17sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="23dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_medical_history_description"/>
+
+            <Switch
+                android:id="@+id/new_medical_history_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                app:layout_constraintStart_toEndOf="@+id/new_medical_history_question"
+                app:layout_constraintTop_toTopOf="@+id/new_medical_history_question"
+                app:layout_constraintBottom_toBottomOf="@+id/new_medical_history_question"/>
+
+            <EditText
+                android:id="@+id/new_medicine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Medicine"
+                android:inputType="text"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/new_medical_history_question"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/medical_history_important_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark as Important"
+                android:textSize="17sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="23dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_medicine"/>
+
+            <ImageView
+                android:id="@+id/new_medical_history_notImportant_image"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/exclamation_off"
+                android:layout_marginStart="30dp"
+                app:layout_constraintStart_toEndOf="@+id/medical_history_important_message"
+                app:layout_constraintTop_toTopOf="@+id/medical_history_important_message"
+                app:layout_constraintBottom_toBottomOf="@+id/medical_history_important_message"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <ImageView
+                android:id="@+id/new_medical_history_important_image"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/exclamation_on"
+                android:layout_marginStart="30dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/medical_history_important_message"
+                app:layout_constraintTop_toTopOf="@+id/medical_history_important_message"
+                app:layout_constraintBottom_toBottomOf="@+id/medical_history_important_message"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/new_medical_history_confirm_button"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#FF9800"
+        android:text="ADD"
+        app:layout_constraintBottom_toTopOf="@+id/new_medical_history_cancel_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/new_medical_history_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CANCEL"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/loading_adding_medical_history"
+        layout="@layout/loading_circle"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="90dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

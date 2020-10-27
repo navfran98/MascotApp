@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_your_pets">
+
+    <fragment
+        android:id="@+id/nav_your_pets"
+        android:name="com.barkindustries.mascotapp.ui.yourPets.YourPetsFragment"
+        android:label="@string/menu_your_pets"
+        tools:layout="@layout/fragment_your_pets">
+        <action
+            android:id="@+id/action_nav_yourPetsFragment_to_petProfileFragment"
+            app:destination="@+id/petProfileFragment"/>
+        <action
+            android:id="@+id/action_nav_yourPetsFragment_to_addPetFragment"
+            app:destination="@+id/addPetFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/petProfileFragment"
+        android:name="com.barkindustries.mascotapp.ui.yourPets.PetProfileFragment"
+        android:label="Pet Profile"
+        tools:layout="@layout/fragment_pet_profile">
+        <action
+            android:id="@+id/action_petProfileFragment_to_medicalHistory"
+            app:destination="@id/medicalHistory" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPetFragment"
+        android:name="com.barkindustries.mascotapp.ui.yourPets.AddPetFragment"
+        android:label="Add Pet"
+        tools:layout="@layout/fragment_add_pet"/>
+    <fragment
+        android:id="@+id/messengerFragment"
+        android:name="com.barkindustries.mascotapp.ui.chatWithVets.MessengerFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_messenger"/>
+
+    <fragment
+        android:id="@+id/nav_chat_with_vets"
+        android:name="com.barkindustries.mascotapp.ui.chatWithVets.SeeUsersFragment"
+        android:label="@string/menu_chat_with_vets"
+        tools:layout="@layout/fragment_see_users">
+        <action
+            android:id="@+id/action_see_users_fragment_to_messenger_fragment"
+            app:destination="@id/messengerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_services"
+        android:name="com.barkindustries.mascotapp.ui.servicesNew.Services"
+        android:label="@string/menu_services"
+        tools:layout="@layout/services">
+<!--        <action-->
+<!--            android:id="@+id/action_nav_services_to_serviceGroomerFragment"-->
+<!--            app:destination="@id/serviceGroomerFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_nav_services_to_serviceShopFragment"-->
+<!--            app:destination="@id/serviceShopFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_nav_services_to_serviceShelterFragment"-->
+<!--            app:destination="@id/serviceShelterFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_nav_services_to_serviceSitterFragment"-->
+<!--            app:destination="@id/serviceSitterFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_nav_services_to_serviceVetFragment"-->
+<!--            app:destination="@id/serviceVetFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_nav_services_to_serviceWalkerFragment"-->
+<!--            app:destination="@id/serviceWalkerFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_nav_services_to_serviceBreederFragment"-->
+<!--            app:destination="@id/serviceBreederFragment" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/nav_lost_pets"
+        android:name="com.barkindustries.mascotapp.ui.lostPets.LostPetsFragment"
+        android:label="@string/menu_lost_pets"
+        tools:layout="@layout/fragment_lost_pets"/>
+    <fragment
+        android:id="@+id/nav_maps"
+        android:name="com.barkindustries.mascotapp.ui.maps.MapsFragment"
+        android:label="@string/menu_maps"
+        tools:layout="@layout/fragment_maps"/>
+    <fragment
+        android:id="@+id/nav_FAQ"
+        android:name="com.barkindustries.mascotapp.ui.FAQ.FAQFragment"
+        android:label="@string/menu_FAQ"
+        tools:layout="@layout/fragment_faq"/>
+
+    <fragment
+        android:id="@+id/nav_tinder_for_pets"
+        android:name="com.barkindustries.mascotapp.ui.tinderForPets.TinderForPetsFragment"
+        android:label="Tinder For Pets"
+        tools:layout="@layout/fragment_tinder_for_pets" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.barkindustries.mascotapp.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_owner_profile" />
+
+    <fragment
+        android:id="@+id/medicalHistory"
+        android:name="com.barkindustries.mascotapp.ui.yourPets.medicalHistory.MedicalHistoryFragment"
+        android:label="fragment_medical_history"
+        tools:layout="@layout/fragment_medical_history">
+        <action
+            android:id="@+id/action_medicalHistory_to_addMedicalHistory"
+            app:destination="@+id/addMedicalHistory"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addMedicalHistory"
+        android:name="com.barkindustries.mascotapp.ui.yourPets.medicalHistory.AddMedicalHistoryFragment"
+        android:label="addMedicalHistory"
+        tools:layout="@layout/fragment_add_medical_history"/>
+</navigation>

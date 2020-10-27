@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <TextView
+        android:id="@+id/invalid_description_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="You must provide some description!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#FF0000"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_editText" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/lost_pet_imageView"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/lost_pet_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Firulais"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/lost_pet_imageView"
+        app:layout_constraintTop_toTopOf="@+id/lost_pet_imageView" />
+
+    <TextView
+        android:id="@+id/lost_pet_breed_textView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ovejero Alemán"
+        app:layout_constraintStart_toStartOf="@+id/lost_pet_name_textView"
+        app:layout_constraintTop_toBottomOf="@+id/lost_pet_name_textView" />
+
+    <TextView
+        android:id="@+id/lost_pet_age_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="9 years old"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lost_pet_breed_textView"
+        app:layout_constraintTop_toBottomOf="@+id/lost_pet_breed_textView" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/lost_pet_size_textView"
+        app:layout_constraintTop_toTopOf="@+id/lost_pet_size_textView" />
+
+    <TextView
+        android:id="@+id/lost_pet_size_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Medium sized"
+        app:layout_constraintStart_toStartOf="@+id/lost_pet_age_textView"
+        app:layout_constraintTop_toBottomOf="@+id/lost_pet_age_textView" />
+
+    <TextView
+        android:id="@+id/lost_pet_gender_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="24dp"
+        android:text="Male"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+    <Button
+        android:id="@+id/seen_it_button"
+        android:layout_width="140dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FF9800"
+        android:text="I've lost it!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map_frameLayout" />
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="73dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="24dp"
+        android:text="Close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seen_it_button" />
+
+    <EditText
+        android:id="@+id/description_editText"
+        android:layout_width="0dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint='Responds to the name "Firulais", last seen near the gas station, etc.'
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lost_pet_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <RadioButton
+        android:id="@+id/lost_here_radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="I've lost it where I am now"
+        app:layout_constraintStart_toStartOf="@+id/description_editText"
+        app:layout_constraintTop_toBottomOf="@+id/description_editText" />
+
+    <RadioButton
+        android:id="@+id/lost_elsewhere_radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="I've lost it elsewhere"
+        app:layout_constraintStart_toStartOf="@+id/lost_here_radioButton"
+        app:layout_constraintTop_toBottomOf="@+id/lost_here_radioButton" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Useful information:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/lost_pet_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/lost_pet_imageView" />
+
+    <FrameLayout
+        android:id="@+id/map_frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lost_elsewhere_radioButton">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/invalid_address_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You must select a location!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#FF0000"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map_frameLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

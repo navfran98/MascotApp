@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_sp"
+    app:startDestination="@id/nav_home_sp">
+
+    <fragment
+        android:id="@+id/nav_home_sp"
+        android:name="com.barkindustries.mascotapp.uiSP.homeSP.HomeSPFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home_sp"/>
+    <fragment
+        android:id="@+id/nav_clients_sp"
+        android:name="com.barkindustries.mascotapp.uiSP.clients.ClientsFragment"
+        android:label="Clients"
+        tools:layout="@layout/fragment_clients_sp"/>
+    <fragment
+        android:id="@+id/nav_maps_sp"
+        android:name="com.barkindustries.mascotapp.ui.maps.MapsFragment"
+        android:label="Maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/messengerFragment"
+        android:name="com.barkindustries.mascotapp.ui.chatWithVets.MessengerFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_messenger"/>
+    <fragment
+        android:id="@+id/nav_chat_with_vets"
+        android:name="com.barkindustries.mascotapp.ui.chatWithVets.SeeUsersFragment"
+        android:label="@string/menu_chat_with_vets"
+        tools:layout="@layout/fragment_see_users">
+    <action
+        android:id="@+id/action_see_users_fragment_to_messenger_fragment"
+        app:destination="@id/messengerFragment" />
+    </fragment>
+</navigation>

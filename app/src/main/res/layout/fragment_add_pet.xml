@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ui.yourPets.AddPetFragment"
+    tools:visibility="visible">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- This is from an extension we have in the Gradle build.
+                It allowed us to complete photo-upload to Firebase -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/add_petphoto_img"
+                android:layout_width="125dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="23dp"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toStartOf="@+id/add_pet_upload_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/add_pet_upload_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_upload"
+                android:text="UPLOAD PHOTO"
+                app:layout_constraintBottom_toBottomOf="@+id/add_petphoto_img"
+                app:layout_constraintEnd_toEndOf="@+id/add_pet_name"
+                app:layout_constraintTop_toTopOf="@+id/add_petphoto_img" />
+
+            <EditText
+                android:id="@+id/add_pet_name"
+                android:layout_width="320dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_petphoto_img" />
+
+            <EditText
+                android:id="@+id/add_pet_breed"
+                android:layout_width="320dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="Breed"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_pet_name" />
+
+            <EditText
+                android:id="@+id/add_pet_weight"
+                android:layout_width="320dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:hint="Weight (in Kg)"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_pet_breed" />
+
+            <Button
+                android:id="@+id/add_pet_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FF9800"
+                android:paddingHorizontal="40dp"
+                android:text="ADD PET"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gender_switch" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/add_pet_btn"
+                app:layout_constraintTop_toTopOf="@+id/add_pet_btn"
+                app:layout_constraintEnd_toEndOf="@+id/add_pet_btn"
+                app:layout_constraintStart_toStartOf="@+id/add_pet_btn" />
+
+
+            <Button
+                android:id="@+id/add_cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="30dp"
+                android:text="CANCEL"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_pet_btn" />
+
+            <Switch
+                android:id="@+id/gender_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_birthday" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:text="Male"
+                app:layout_constraintBottom_toBottomOf="@+id/gender_switch"
+                app:layout_constraintEnd_toStartOf="@+id/gender_switch"
+                app:layout_constraintTop_toTopOf="@+id/gender_switch" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Female"
+                app:layout_constraintBottom_toBottomOf="@+id/gender_switch"
+                app:layout_constraintStart_toEndOf="@+id/gender_switch"
+                app:layout_constraintTop_toTopOf="@+id/gender_switch" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/calendar_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_selectbd" />
+
+            <TextView
+                android:id="@+id/tv_selectbd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Select a birthday date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_pet_weight" />
+
+            <TextView
+                android:id="@+id/tv_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calendar_button" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".ProfileFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Tap profile picture to edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo_imageView" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:contentDescription="@string/orange_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/side_nav_bar" />
+
+    <TextView
+        android:id="@+id/error_owner_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Error loading Profile!"
+        android:textSize="25sp"
+        android:visibility="gone"
+        android:layout_marginTop="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    Profile picture-->
+    <include
+        android:id="@+id/loading_owner_profile"
+        layout="@layout/loading_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/photo_imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/default_profile_picture"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+<!--    Profile Username-->
+    <TextView
+        android:id="@+id/owner_profile_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/owner_username"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo_imageView" />
+
+    <TextView
+        android:id="@+id/owner_profile_username_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:maxWidth="240dp"
+        android:text="USERNAME PLACEHOLDER"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_username"
+        app:layout_constraintTop_toBottomOf="@+id/owner_profile_username" />
+
+    <EditText
+        android:id="@+id/owner_profile_username_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:maxWidth="240dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/owner_profile_username_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_username_data"
+        app:layout_constraintTop_toTopOf="@+id/owner_profile_username_data" />
+
+<!--    Profile RealName-->
+    <TextView
+        android:id="@+id/owner_profile_realName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Real Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_username_data"
+        app:layout_constraintTop_toBottomOf="@+id/owner_profile_username_data" />
+
+    <TextView
+        android:id="@+id/owner_profile_realName_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:maxWidth="240dp"
+        android:text="REAL-NAME PLACEHOLDER"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_realName"
+        app:layout_constraintTop_toBottomOf="@+id/owner_profile_realName" />
+
+    <EditText
+        android:id="@+id/owner_profile_realName_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:maxWidth="240dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/owner_profile_realName_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_realName_data"
+        app:layout_constraintTop_toTopOf="@+id/owner_profile_realName_data" />
+
+<!--    Profile Email-->
+    <TextView
+        android:id="@+id/owner_profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/owner_email"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_realName_data"
+        app:layout_constraintTop_toBottomOf="@+id/owner_profile_realName_data" />
+
+    <TextView
+        android:id="@+id/owner_profile_email_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:maxWidth="300dp"
+        android:text="EMAIL PLACEHOLDER"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_email"
+        app:layout_constraintTop_toBottomOf="@+id/owner_profile_email" />
+
+<!--    Profile Phone-->
+    <TextView
+        android:id="@+id/owner_profile_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Phone"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_email_data"
+        app:layout_constraintTop_toBottomOf="@+id/owner_profile_email_data" />
+
+    <TextView
+        android:id="@+id/owner_profile_phone_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:maxWidth="240dp"
+        android:text="PHONE PLACEHOLDER"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_phone"
+        app:layout_constraintTop_toBottomOf="@+id/owner_profile_phone" />
+
+    <EditText
+        android:id="@+id/owner_profile_phone_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:maxWidth="240dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/owner_profile_phone_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_phone_data"
+        app:layout_constraintTop_toTopOf="@+id/owner_profile_phone_data" />
+
+<!--    Profile Address-->
+    <TextView
+        android:id="@+id/owner_profile_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Address"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_phone_data"
+        app:layout_constraintTop_toBottomOf="@+id/owner_profile_phone_data" />
+
+    <TextView
+        android:id="@+id/owner_profile_address_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:maxWidth="240dp"
+        android:text="ADDRESS PLACEHOLDER"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_address"
+        app:layout_constraintTop_toBottomOf="@+id/owner_profile_address" />
+
+    <EditText
+        android:id="@+id/owner_profile_address_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:maxWidth="240dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/owner_profile_address_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/owner_profile_address_data"
+        app:layout_constraintTop_toTopOf="@+id/owner_profile_address_data" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_owner_profile_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/edit_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/done_editing_owner_profile_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="294dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:visibility="gone"
+        android:src="@drawable/checkmark_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

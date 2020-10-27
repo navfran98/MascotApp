@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:id="@+id/medical_history_item">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/colorAccent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="7dp">
+            <TextView
+                android:id="@+id/history_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History item Title"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/history_item_timestamp"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/history_item_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxWidth="360dp"
+                android:text="History Item Description"
+                android:textSize="14sp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/history_item_title" />
+            <TextView
+                android:id="@+id/history_item_timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Timestamp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/history_item_medicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/history_item_description"
+                app:layout_constraintStart_toStartOf="parent">
+                <ImageView
+                    android:id="@+id/medicine_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/medicine_icon" />
+                <TextView
+                    android:id="@+id/medicine_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    app:layout_constraintStart_toEndOf="@+id/medicine_icon"
+                    app:layout_constraintTop_toTopOf="@+id/medicine_icon"
+                    app:layout_constraintBottom_toBottomOf="@+id/medicine_icon"
+                    android:text="MEDICINE"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/medical_history_item_important_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/exclamation_on"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
